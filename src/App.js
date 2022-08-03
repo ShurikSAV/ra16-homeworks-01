@@ -22,12 +22,11 @@ function App() {
   return (
     <div>
       <Header menu={menu} />
-
       <div className="App">
         <Routes>
           {/* <Route path="/Shop" element={<Shop/>}></Route> */}
           {menu.map(
-            (item) => <Route {...item}></Route>
+            (item,index) => <Route key={index} {...item}></Route>
           )}
         </Routes>
       </div>
