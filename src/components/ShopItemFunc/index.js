@@ -21,13 +21,19 @@ function ShopItemFunc({item}) {
   )
 }
 
+
+
 ShopItemFunc.propTypes = {
-  brand: PropTypes.string,
-  title: PropTypes.number,
-  description: PropTypes.string,
-  descriptionFull: PropTypes.string,
-  price: PropTypes.number,
-  currency: PropTypes.string,
+  item: PropTypes.shape({
+    brand: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    descriptionFull: PropTypes.string,
+    price: PropTypes.number,
+    currency: PropTypes.string
+  })
+  
+  
   }
 
 export default ShopItemFunc
