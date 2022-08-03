@@ -1,0 +1,13 @@
+.header {
+    width: 100%;
+  }
+  
+.linkMenu {
+    display:inline;
+    padding: 10px;
+}
+
+.active{
+    /* color:cadetblue; */
+    text-decoration: none;
+  }
