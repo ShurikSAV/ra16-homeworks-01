@@ -2,6 +2,16 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Header from './components/Header';
 import Shop from './content/Shop';
+import ShopClass from './content/ShopСlass'
+
+const ShopItem = {
+  brand: 'Tiger of Sweden',
+  title: 'Leonard coat',
+  description: 'Minimalistic coat in cotton-blend',
+  descriptionFull: 'Men\'s minimalistic overcoat in cotton-blend. Features a stand-up collar, concealed front closure and single back vent. Slim fit with clean, straight shape. Above-knee length.',
+  price: 399,
+  currency: '£'
+}
 
 function App() {
   const menu = [
@@ -14,8 +24,13 @@ function App() {
     },
     {
       path: "/Shop",
-      name: "Магазин (функциональный компонент)",
-      element: <Shop/>
+      name: "Магазин (function)",
+      element: <Shop item={ShopItem}/>
+    },
+    {
+      path: "/ShopClass",
+      name: "Магазина (class)",
+      element: <ShopClass item={ShopItem}/>
     }
   ]
 
