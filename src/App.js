@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Header from './content/Header';
+import Header from './components/Header';
 import Shop from './content/Shop';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     },
     {
       path: "/Shop",
-      name: "Магазин",
+      name: "Магазин (функциональный компонент)",
       element: <Shop/>
     }
   ]

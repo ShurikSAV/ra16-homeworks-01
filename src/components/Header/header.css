@@ -6,14 +6,21 @@
   
   z-index:99;
   font-size: 25px;
+  
   }
   
 .linkMenu {
     display:inline;
     padding: 10px;
+    color: aqua;
 }
 
-.active{
+.linkActive,.linkActive::after {
     /* color:cadetblue; */
     text-decoration: none;
+    color: aqua;
   }
+
+.linkDisable, .linkDisable::after {
+  color: aqua;
+}
