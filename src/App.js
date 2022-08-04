@@ -14,7 +14,8 @@ const ShopItem = {
   currency: '£'
 }
 
-const now = new Date(2017, 2, 8);
+
+const now = new Date();
 
 function App() {
   const menu = [
@@ -38,7 +39,11 @@ function App() {
     {
       path: "/calendar",
       name: "Календарь",
-      element: <Calendar dateNow={now}/>
+      element: 
+        <>
+          <Calendar dateNow={now}/>
+          <Calendar dateNow={new Date(2017, 2, 8)}/>
+        </>
     }
   ]
 
@@ -57,4 +62,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
