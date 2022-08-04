@@ -37,4 +37,3 @@ ShopItemFunc.propTypes = {
   }
 
 export default ShopItemFunc
-

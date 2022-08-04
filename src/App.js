@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Header from './components/Header';
 import Shop from './content/Shop';
 import ShopClass from './content/ShopСlass'
+import Calendar from './components/Calendar';
 
 const ShopItem = {
   brand: 'Tiger of Sweden',
@@ -12,6 +13,8 @@ const ShopItem = {
   price: 399,
   currency: '£'
 }
+
+const now = new Date(2017, 2, 8);
 
 function App() {
   const menu = [
@@ -31,6 +34,11 @@ function App() {
       path: "/ShopClass",
       name: "Магазина (class)",
       element: <ShopClass item={ShopItem}/>
+    },
+    {
+      path: "/calendar",
+      name: "Календарь",
+      element: <Calendar dateNow={now}/>
     }
   ]
 

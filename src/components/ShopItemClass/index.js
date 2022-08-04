@@ -14,9 +14,9 @@ class ShopItemClass  extends React.Component {
   }
   constructor(props) {
     super(props)
-}
+  }
 
-render() {
+  render() {
     const {brand, title, description, descriptionFull, price, currency} = this.props.item
 
     return (
