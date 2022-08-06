@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import Toolbar from '../Toolbar'
+import React from 'react';
+import Toolbar from '../../components/Toolbar'
+import ProjectList from '../../components/ProjectList'
 import './portfolio.css'
 
 
-const listProjects = [
+
+const projectsList = [
     {
         img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/mon.jpg",
         category: "Business Cards"
@@ -58,27 +60,29 @@ const listProjects = [
     }
 ]
 
-function Portfolio()  {
-    const [filterValue, setFilterValue] = useState("All")
+export class Portfolio extends React.Component  {
+    static propTypes = { }
+    
+    state = { filterValue: "All" }
 
-    const onSelectFilter = (filter) => {
-        setFilterValue(filter)
+    
+    onSelectFilter(filter) {
+        this.setState( (_) => ( { filterValue: filter } ))
     }
 
-    return (
-        <div className='Portfolio'>
-            <Toolbar
-                filters={["All", "Websites", "Flayers", "Business Cards"]}
-                selected={filterValue}
-                onSelectFilter={onSelectFilter}
-                />
+    render() {
+        return (
+            <div className='Portfolio'>
+                <Toolbar
+                    filters={["All", "Websites", "Flayers", "Business Cards"]}
+                    selected={this.state.filterValue}
+                    onSelectFilter={ (filter) => this.onSelectFilter(filter)}
+                    />
 
-            {/* <ProjectList></ProjectList> */}
-            <p>
-                Portfolio
-            </p>
-        </div>
-    )
+                <ProjectList projects={projectsList.filter( (value) => this.state.filterValue == "All" || this.state.filterValue == value.category)} />
+            </div>
+        )
+    }
 }
 
 export default Portfolio;

@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Shop from './content/Shop';
 import ShopClass from './content/ShopСlass'
 import Calendar from './components/Calendar';
-import Portfolio from './components/Portfolio'
+import Portfolio from './content/Portfolio'
 import { useState } from 'react';
 
 const ShopItem = {
@@ -36,7 +36,7 @@ function App() {
             (i) => 
               <button 
                 onClick={() => setLessonNumber(i)} 
-                className={lessonNumber == i ? "activButton" : ""}>
+                className={lessonNumber === i ? "activButton" : ""}>
                 Урок {i}
               </button>
             )}

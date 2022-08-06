@@ -1,0 +1,18 @@
+.ProjectList { 
+  overflow: hidden;
+  width: 100%;
+}
+
+.ProjectList .ramka { 
+  float:right ;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   width: 300px;
+   /* height: 300px; */
+   max-height: 300px;   
+   overflow: hidden;
+}
+
+.ProjectList img { 
+  width: 100% ;
+}
