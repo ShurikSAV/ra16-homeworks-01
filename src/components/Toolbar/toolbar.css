@@ -1,0 +1,18 @@
+.filterItem {
+    margin: 0px 2px;
+
+    padding: 5px 10px;
+    border: solid;
+    color: black;
+    background-color: white;
+}
+
+.filterItemActiv {
+    background-color:dimgrey;
+    margin: 0px 2px;
+
+    padding: 5px 10px;
+    border: solid;
+    color: black;
+    color: white;
+}

@@ -1,3 +1,4 @@
+import React from 'react';
 import ShopItemFunc from '../../components/ShopItemFunc';
 import './css/main.css'
 

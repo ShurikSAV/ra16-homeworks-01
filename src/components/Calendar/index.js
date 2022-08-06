@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types'
 import './css/main.css'
 import CalendarWeek from './CalendarWeek.js'
