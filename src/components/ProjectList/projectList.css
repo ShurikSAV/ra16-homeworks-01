@@ -4,11 +4,10 @@
 }
 
 .ProjectList .ramka { 
-  float:right ;
+  float: left;
    margin-right: 10px;
    margin-bottom: 10px;
    width: 300px;
-   /* height: 300px; */
    max-height: 300px;   
    overflow: hidden;
 }
