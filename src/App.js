@@ -7,6 +7,7 @@ import ShopClass from './content/ShopСlass'
 import Calendar from './components/Calendar';
 import Portfolio from './content/Portfolio'
 import { useState } from 'react';
+import LocationOfGoods from './content/LocationOfGoods'
 
 const ShopItem = {
   brand: 'Tiger of Sweden',
@@ -70,6 +71,12 @@ function App() {
       name: "Портфолио с фильтрами",
       lessonNumber: 2,
       element: <Portfolio />
+    },
+    {
+      path: "/LocationOfGoods",
+      name: "Расположение товаров",
+      lessonNumber: 2,
+      element: <LocationOfGoods />
     }
   ]
   
