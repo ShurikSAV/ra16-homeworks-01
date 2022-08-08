@@ -1,5 +1,5 @@
 .ListView {
     display: grid;
-    /* grid-template-columns: 400px 400px 400px; */
-    grid-template-rows: 400px;
+    grid-template-rows: auto;
+    padding: 0px 20px;
 }

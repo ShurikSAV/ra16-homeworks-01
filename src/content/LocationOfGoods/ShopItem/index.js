@@ -14,14 +14,11 @@ import './shopItem.css'
 const ShopItem = ({name, price, color, img}) => {
   return (
     <div className='ShopItem'>
+      <img src={img} />
       <h1>{name}</h1>
       <h2>{color}</h2>
-      <img src={img} />
-      <div className='footer'>
-        <p className='price'>${price}</p>
-        <p></p>
-        <button>ADD TO CART</button>
-      </div>
+      <p className='price'>${price}</p>
+      <button>ADD TO CART</button>
     </div>
   )
 }
