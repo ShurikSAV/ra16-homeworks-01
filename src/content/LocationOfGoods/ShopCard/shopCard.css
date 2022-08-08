@@ -1,0 +1,44 @@
+.ShopCard {
+    text-align: center;
+    
+    margin: 30px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.ShopCard img {
+    width: 200px;
+    height: 200px;
+}
+
+.ShopCard h1 {
+    font-size: 20px;
+}
+
+.ShopCard h2 {
+    font-size: 16px;
+    padding: 10px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 18px;
+    color: darkred;
+    text-align: left;
+}
+
+.ShopCard button {
+    font-size: 12px;
+    color: darkred;
+    padding: 5px 5px;
+    background-color: transparent;
+    border: solid 1px;
+    border-radius: 10px;
+}
+
+.footer {
+    margin: auto;
+    padding: 0px 30px;
+    width: 200px;
+    display: grid;
+    grid-template-columns: 80px auto 95px;
+}
