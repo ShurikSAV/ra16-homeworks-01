@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ShopItemClass from '../../components/ShopItemClass';
-import './css/main.css'
+import './css/ShopСlass.css'
 
 class ShopClass extends Component {
 	static propTypes = {
@@ -17,8 +17,7 @@ class ShopClass extends Component {
 	
 	render() {
 		const {item} = this.props;
-		
-		
+
 		return (
 			<div className="container">
 				<div className="background-element"></div>

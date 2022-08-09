@@ -24,7 +24,7 @@ const now = new Date();
 function App() {
   const [lessonNumber, setLessonNumber] = useState(2)
   
-  const menu = [
+  let menu = [
     {
       path: "/",
       name: "Домой",
@@ -76,15 +76,18 @@ function App() {
       name: "Расположение товаров",
       lessonNumber: 2,
       element: <LocationOfGoods />
-    },
-    {
-      path: "/DropdownContent",
-      name: "Выпадающий список",
-      lessonNumber: 2,
-      element: <DropdownContent />
     }
   ]
   
+  //TODO Костыль что бы получить ссылку на меню
+  menu = [...menu,{
+    path: "/DropdownContent",
+    name: "Выпадающий список",
+    lessonNumber: 2,
+    element: <DropdownContent dropdownMenu={menu} />
+  } ]
+
+  //TODO Изоировать стили в модулях
 
   return (
     <div className='App'>
