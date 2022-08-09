@@ -5,10 +5,10 @@ import Header from './components/Header';
 import Shop from './content/Shop';
 import ShopClass from './content/ShopСlass'
 import Calendar from './components/Calendar';
-import Portfolio from './content/Portfolio'
+import Portfolio from './content/Portfolio_02'
 import { useState } from 'react';
-import LocationOfGoods from './content/LocationOfGoods'
-import DropdownContent from './content/DropdownContent';
+import LocationOfGoods from './content/LocationOfGoods_02'
+import DropdownContent from './content/DropdownContent_02';
 
 const ShopItem = {
   brand: 'Tiger of Sweden',
