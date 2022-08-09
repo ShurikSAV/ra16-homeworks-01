@@ -8,6 +8,7 @@ import Calendar from './components/Calendar';
 import Portfolio from './content/Portfolio'
 import { useState } from 'react';
 import LocationOfGoods from './content/LocationOfGoods'
+import DropdownContent from './content/DropdownContent';
 
 const ShopItem = {
   brand: 'Tiger of Sweden',
@@ -75,6 +76,12 @@ function App() {
       name: "Расположение товаров",
       lessonNumber: 2,
       element: <LocationOfGoods />
+    },
+    {
+      path: "/DropdownContent",
+      name: "Выпадающий список",
+      lessonNumber: 2,
+      element: <DropdownContent />
     }
   ]
   
