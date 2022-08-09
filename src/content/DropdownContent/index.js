@@ -5,24 +5,37 @@ import './dropdownContent.css'
 function DropdownContent() {
 	const [dropdownListVisible, setDropdownListVisible] = useState(false)
 	const [position, setPosition] = useState(CreatePosition(0,0))
+	const [menuDropdownList, setMenuDropdownList] = useState([
+		{isActive: true, name: "Profile Information"},
+		{isActive: false, name: "Change Password"},
+		{isActive: false, name: "Become PRO"},
+		{isActive: false, name: "Help"},
+		{isActive: false, name: "Log Out"}
+	])
 	
-	function CreatePosition(clientX,clientY) { return {clientX,clientY}}
+	function CreateMenuDropdownList(isActive, name) {return {isActive, name}}
 
+	function CreatePosition(clientX,clientY) { return {clientX,clientY}}
 	
-	const toggleOpen = (event) => {
+	const toggleOpenOrClose = (event) => {
 		setPosition(CreatePosition(event.clientX, event.clientY))
 		setDropdownListVisible(!dropdownListVisible)
-		console.log(event.clientX, event.clientY );
+	}
+
+	const dropdownListOnClick = (indexClick) => {
+		setMenuDropdownList( menuDropdownList.map(
+			({name}, i) => CreateMenuDropdownList(indexClick === i, name)
+		))
 	}
 
 	return (
-		<div class="container">
-			<div data-id="wrapper" class="dropdown-wrapper open">
-				<button data-id="toggle" class="btn" onClick={toggleOpen}>
+		<div className="container">
+			<div data-id="wrapper" className="dropdown-wrapper open">
+				<button data-id="toggle" className="btn" onClick={toggleOpenOrClose}>
 					<span>Account Settings</span>
-					<i class="material-icons">public</i>
+					<i className="material-icons">public</i>
 				</button>
-				{dropdownListVisible === true && <DropdownList position={position}/>}
+				{dropdownListVisible === true && <DropdownList menu={menuDropdownList} position={position} dropdownListOnClick={dropdownListOnClick}/>}
 			</div>
 		</div>
 		

@@ -2,16 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import './shopItem.css'
 
-/*
-{
-    name: "Nike Metcon 2",
-    price: "130",
-    color: "red",
-    img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/layouts/img/1.jpg"
-  }
-*/
-
-
 const ShopItem = ({name, price, color, img}) => {
   return (
     <div className='ShopItem'>
