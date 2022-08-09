@@ -39,8 +39,6 @@ const products = [{
 export class Store extends Component {
   static propTypes = {}
   
-  
-  
   /**переключение между типами расположения товаров */
   onSwitch(evt) {
     this.setState(prevState => ({
@@ -66,8 +64,8 @@ export class Store extends Component {
           icon={"view_module"} 
           onSwitch={evt => this.onSwitch(evt)}
           />
-        {this.state.switchMode == 1 && <CardsView cards={this.state.products} />}
-        {this.state.switchMode == 2 && <ListView cards={this.state.products} />}
+        {this.state.switchMode === 1 && <CardsView cards={this.state.products} />}
+        {this.state.switchMode === 2 && <ListView cards={this.state.products} />}
       </>
 
     )

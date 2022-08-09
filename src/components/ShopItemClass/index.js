@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react'
 
-class ShopItemClass  extends React.Component {
+class ShopItemClass  extends Component {
   static propTypes = {
     item: PropTypes.shape({
       brand: PropTypes.string,
@@ -11,9 +11,6 @@ class ShopItemClass  extends React.Component {
       price: PropTypes.number,
       currency: PropTypes.string
       })
-  }
-  constructor(props) {
-    super(props)
   }
 
   render() {

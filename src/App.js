@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from './components/Header';
 import Shop from './content/Shop';
 import ShopClass from './content/ShopСlass'
@@ -23,8 +23,6 @@ const now = new Date();
 function App() {
   const [lessonNumber, setLessonNumber] = useState(2)
   
-  console.log('lessonNumber', lessonNumber);
-  
   const menu = [
     {
       path: "/",
@@ -35,7 +33,7 @@ function App() {
           <p>Выберите задание в меню выше</p>
           {[1,2].map( 
             (i) => 
-              <button 
+              <button key={i}
                 onClick={() => setLessonNumber(i)} 
                 className={lessonNumber === i ? "activButton" : ""}>
                 Урок {i}

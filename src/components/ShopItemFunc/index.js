@@ -22,8 +22,6 @@ function ShopItemFunc({item}) {
   )
 }
 
-
-
 ShopItemFunc.propTypes = {
   item: PropTypes.shape({
     brand: PropTypes.string,

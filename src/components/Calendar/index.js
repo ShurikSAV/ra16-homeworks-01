@@ -10,7 +10,7 @@ function Calendar({dateNow}) {
 
     result.setDate(1)
 
-    if (result.getDay() == 0) {
+    if (result.getDay() === 0) {
       result.setDate(result.getDate() - 6)
     }
     else if (result.getDay() > 1) {
