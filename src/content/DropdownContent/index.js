@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import DropdownList from './DropdownList';
 import './dropdownContent.css'
 
+const menu = [
+	{isActive: true, name: "Profile Information"},
+	{isActive: false, name: "Change Password"},
+	{isActive: false, name: "Become PRO"},
+	{isActive: false, name: "Help"},
+	{isActive: false, name: "Log Out"}
+]
+
 function DropdownContent() {
 	const [dropdownListVisible, setDropdownListVisible] = useState(false)
 	const [position, setPosition] = useState(CreatePosition(0,0))
-	const [menuDropdownList, setMenuDropdownList] = useState([
-		{isActive: true, name: "Profile Information"},
-		{isActive: false, name: "Change Password"},
-		{isActive: false, name: "Become PRO"},
-		{isActive: false, name: "Help"},
-		{isActive: false, name: "Help2"},
-		{isActive: false, name: "Log Out"}
-	])
-	
-	
+	const [menuDropdownList, setMenuDropdownList] = useState(menu)
 
 	function CreateMenuDropdownList(isActive, name) {return {isActive, name}}
 
@@ -31,6 +30,7 @@ function DropdownContent() {
 		setMenuDropdownList( menuDropdownList.map(
 			({name}, i) => CreateMenuDropdownList(indexClick === i, name)
 		))
+		setDropdownListVisible(!dropdownListVisible)
 	}
 
 	return (
