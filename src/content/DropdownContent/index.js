@@ -10,15 +10,20 @@ function DropdownContent() {
 		{isActive: false, name: "Change Password"},
 		{isActive: false, name: "Become PRO"},
 		{isActive: false, name: "Help"},
+		{isActive: false, name: "Help2"},
 		{isActive: false, name: "Log Out"}
 	])
 	
+	
+
 	function CreateMenuDropdownList(isActive, name) {return {isActive, name}}
 
 	function CreatePosition(clientX,clientY) { return {clientX,clientY}}
 	
 	const toggleOpenOrClose = (event) => {
-		setPosition(CreatePosition(event.clientX, event.clientY))
+		const element = event.target.getBoundingClientRect();
+
+		setPosition(CreatePosition(event.clientX - element.left, event.clientY + element.top))
 		setDropdownListVisible(!dropdownListVisible)
 	}
 
@@ -35,8 +40,9 @@ function DropdownContent() {
 					<span>Account Settings</span>
 					<i className="material-icons">public</i>
 				</button>
-				{dropdownListVisible === true && <DropdownList menu={menuDropdownList} position={position} dropdownListOnClick={dropdownListOnClick}/>}
+				{dropdownListVisible && <DropdownList id="dropdownList" menu={menuDropdownList} position={position} dropdownListOnClick={dropdownListOnClick}/>}
 			</div>
+			
 		</div>
 		
 	)
